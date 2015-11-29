@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <div class="pagewidth">
+
+        <div class="header">
+            <!-- TITLE -->
+            <h1><a href="index.jsp">Donation Manager System</a></h1>
+            <h2>Işık University</h2>
+            <!-- END TITLE -->
+        </div>
+
+        <div class="nav">
+            <ul>	
+                <!-- MENU -->
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">User Login</a></li>
+                <!-- END MENU -->
+            </ul>
+        </div>
+
+        <div class="page-wrap">
+            <div class="content">
+
+                <!-- CONTENT -->
+                
+                <h2>Registration Form</h2>
+                <p>Please fill the form.</p>
+                
+                <form method="post" action="register.jsp">                                
+                    <table>
+                        <tr><td>First name<sup></sup> (*):</td>
+                        <td><input type="text" name="firstname" size="50" /></td></tr>
+                        
+                        <tr><td>Last name (*):</td>
+                        <td><input type="text" name="lastname" size="50"/></td></tr>
+                        
+                        <tr><td>Username (*):</td>
+                        <td><input type="text" name="username" size="50" /></td></tr>
+                        
+                        <tr><td>Password (*):</td>
+                        <td><input type="password" name="password" size="50"/></td></tr>
+                        
+                        <tr><td>Gender (*):</td>
+                            <td> <select name="gender" style="width: 383px">
+                                    <option value="male">Male</option> 
+                                    <option value="female">Female</option>
+                                </select></td></tr>
+                        
+                        <tr><td>Age :</td>
+                        <td><input type="text" name="age" size="50"/></td></tr>
+                        
+                        <tr><td>Telephone :</td>
+                        <td><input type="text" name="telephone" size="50"/></td></tr>
+                        
+                        <tr><td>Email (*):</td>
+                        <td><input type="text" name="email" size="50"/></td></tr>
+                        
+                        <tr><td>Address (*):</td>
+                        <td><input type="text" name="address" size="50"/></td></tr>
+                        
+                        <tr><td>User Type (*):</td>
+                            <td> <select name="usertype" style="width: 383px">                                              
+                                    <option value="donator">Donator</option> 
+                                    <option value="foundation">Foundation</option> 
+                                </select></td></tr>
+
+                        <tr><td></td><td><input type="submit" name="Register" value="Register" style="width: 125px;"/></td></tr>
+                        
+                    </table>
+                </form>
+
+                <br/><br/>
+                <!-- END CONTENT -->
+
+            </div>
+
+            <div class="clear"></div>		
+        </div>
+        
+        <div class="footer">
+            <p> &copy; Donation Manager System </p> 
+        </div>	
+    </div>
+
+</body>
+</html>
+
