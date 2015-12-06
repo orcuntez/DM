@@ -1,0 +1,108 @@
+CREATE SCHEMA IF NOT EXISTS `donationmanagerdb` DEFAULT CHARACTER SET latin1 ;
+USE `donationmanagerdb` ;
+
+CREATE TABLE IF NOT EXISTS `donationmanagerdb`.`admin` (
+  `aduname` VARCHAR(15) NOT NULL,
+  `fname` VARCHAR(20) NOT NULL,
+  `lname` VARCHAR(20) NOT NULL,
+  `password` VARCHAR(6) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`aduname`),
+  UNIQUE INDEX `uname_UNIQUE` (`aduname` ASC),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+CREATE TABLE IF NOT EXISTS `donationmanagerdb`.`donator` (
+  `uname` VARCHAR(15) NOT NULL,
+  `password` VARCHAR(6) NOT NULL,
+  `fname` VARCHAR(20) NOT NULL,
+  `lname` VARCHAR(20) NOT NULL,
+  `age` (11) NOT NULL,
+  `gender` VARCHAR(1) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `address` LONGTEXT NOT NULL,
+  `telephone` (11) NOT NULL,
+  PRIMARY KEY (`uname`),
+  UNIQUE INDEX `uname_UNIQUE` (`uname` ASC),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+CREATE TABLE IF NOT EXISTS `donationmanagerdb`.`donation` (
+  `donationID` (11) NOT NULL,
+  `donationType` (11) NOT NULL,
+  `amount` (11) NOT NULL,
+  `date` DATE NOT NULL,
+  `donator_uname` VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`donationID`),
+  UNIQUE INDEX `donationID_UNIQUE` (`donationID` ASC),
+  INDEX `fk_donation_donator_idx` (`donator_uname` ASC),
+  CONSTRAINT `fk_donation_donator`
+    FOREIGN KEY (`donator_uname`)
+    REFERENCES `donationmanagerdb`.`donator` (`uname`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+CREATE TABLE IF NOT EXISTS `donationmanagerdb`.`foundation` (
+  `fduname` VARCHAR(15) NOT NULL,
+  `password` VARCHAR(6) NOT NULL,
+  `foundname` VARCHAR(20) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `telephone` (11) NOT NULL,
+  `address` LONGTEXT NOT NULL,
+  PRIMARY KEY (`fduname`),
+  UNIQUE INDEX `uname_UNIQUE` (`fduname` ASC),
+  UNIQUE INDEX `foundname_UNIQUE` (`foundname` ASC),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+CREATE TABLE IF NOT EXISTS `donationmanagerdb`.`form` (
+  `form` LONGTEXT NOT NULL,
+  `date` DATE NOT NULL,
+  `foundation_uname` VARCHAR(15) NOT NULL,
+  INDEX `fk_form_foundation1_idx` (`foundation_uname` ASC),
+  CONSTRAINT `fk_form_foundation1`
+    FOREIGN KEY (`foundation_uname`)
+    REFERENCES `donationmanagerdb`.`foundation` (`fduname`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+CREATE TABLE IF NOT EXISTS `donationmanagerdb`.`stock` (
+  `DonationType` (11) NOT NULL,
+  `amount` (11) NOT NULL,
+  PRIMARY KEY (`DonationType`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+CREATE TABLE IF NOT EXISTS `donationmanagerdb`.`donationsent` (
+  `amount` INT NOT NULL,
+  `foundation_fduname` VARCHAR(15) NOT NULL,
+  `date` DATE NOT NULL,
+  `donationType` INT NOT NULL,
+  INDEX `fk_donationsent_foundation1_idx` (`foundation_fduname` ASC),
+  CONSTRAINT `fk_donationsent_foundation1`
+    FOREIGN KEY (`foundation_fduname`)
+    REFERENCES `donationmanagerdb`.`foundation` (`fduname`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+
+
