@@ -1,0 +1,15 @@
+INSERT INTO `donationmanagerdb`.`admin` (`aduname`, `fname`, `lname`, `password`, `email`) VALUES ('ygz', 'yagiz', 'sener', 'abc123', 'ygz@ygz.com');
+INSERT INTO `donationmanagerdb`.`admin` (`aduname`, `fname`, `lname`, `password`, `email`) VALUES ('tncy', 'tuncay', 'emekci', 'abc123', 'tncy@yncy.com');
+INSERT INTO `donationmanagerdb`.`admin` (`aduname`, `fname`, `lname`, `password`, `email`) VALUES ('orcn', 'orcun', 'tez', 'abc123', 'orcn@orcn.com');
+INSERT INTO `donationmanagerdb`.`donator` (`uname`, `password`, `fname`, `lname`, `age`, `gender`, `email`, `address`, `telephone`) VALUES ('user1','abc123','fname1','lname1','20','M','usr1@usr1.com','usr1 adress info','0000000000');
+INSERT INTO `donationmanagerdb`.`donator` (`uname`, `password`, `fname`, `lname`, `age`, `gender`, `email`, `address`, `telephone`) VALUES ('user2','abc123','fname2','lname2','21','F','usr2@usr2.com','usr2 adress info','0000000001'); 
+INSERT INTO `donationmanagerdb`.`donator` (`uname`, `password`, `fname`, `lname`, `age`, `gender`, `email`, `address`, `telephone`) VALUES ('user3','abc123','fname3','lname3','22','M','usr3@usr3.com','usr3 adress info','0000000002'); 
+INSERT INTO `donationmanagerdb`.`donator` (`uname`, `password`, `fname`, `lname`, `age`, `gender`, `email`, `address`, `telephone`) VALUES ('user4','abc123','fname4','lname4','23','F','usr4@usr4.com','usr4 adress info','0000000003');
+INSERT INTO `donationmanagerdb`.`donation` (`donationID`, `donationType`, `amount`, `date`) VALUES ('1','1','2','2014-11-11');
+INSERT INTO `donationmanagerdb`.`donation` (`donationID`, `donationType`, `amount`, `date`) VALUES ('2','2','4','2014-11-12');  
+INSERT INTO `donationmanagerdb`.`donation` (`donationID`, `donationType`, `amount`, `date`) VALUES ('3','3','2','2014-11-13');
+INSERT INTO `donationmanagerdb`.`donation` (`donationID`, `donationType`, `amount`, `date`) VALUES ('4','1','4','2014-11-14'); 
+INSERT INTO `donationmanagerdb`.`form` (`uname`, `form`, `date`) VALUES ('fnd1','asdfghjklzxcvbnm qwertyuop','2014-11-14');
+INSERT INTO `donationmanagerdb`.`form` (`uname`, `form`, `date`) VALUES ('fnd2','asdfghjklzxcvbnm qwertyuop','2014-11-15');
+INSERT INTO `donationmanagerdb`.`foundation` (`fduname`, `password`, `foundname`, `email`, `telephone`, `address`) VALUES ('fnd1','abc123','foundation1','fnd1@fnd1.com','021345678','fnd1 address info'); 
+INSERT INTO `donationmanagerdb`.`foundation` (`fduname`, `password`, `foundname`, `email`, `telephone`, `address`) VALUES ('fnd2','abc123','foundation2','fnd2@fnd2.com','012345678','fnd2 address info');
