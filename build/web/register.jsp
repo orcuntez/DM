@@ -11,22 +11,26 @@
 </head>
 <body>
     <%
-    String submit = request.getParameter("Register");
-        
-    if(submit.equals("Register")){    
-    dbbean.setFirstname(request.getParameter("firstname"));
-    dbbean.setLastname(request.getParameter("lastname"));
-    dbbean.setUsername(request.getParameter("username"));
-    dbbean.setPassword(request.getParameter("password"));
-    dbbean.setGender(request.getParameter("gender"));
-    dbbean.setAge(request.getParameter("age"));
-    dbbean.setTelephone(request.getParameter("telephone"));
-    dbbean.setEmail(request.getParameter("email"));
-    dbbean.setAddress(request.getParameter("address"));
-    dbbean.setUsertype(request.getParameter("usertype"));    
-    dbbean.addUser();%>
-    <jsp:forward page="userRegistered.html"/>
-    <%}    
+        String submit = request.getParameter("Register");
+
+        if (submit.equals("Register")) {
+            dbbean.setFirstname(request.getParameter("firstname"));
+            dbbean.setLastname(request.getParameter("lastname"));
+            dbbean.setUsername(request.getParameter("username"));
+            dbbean.setPassword(request.getParameter("password"));
+            dbbean.setGender(request.getParameter("gender"));
+            dbbean.setAge(request.getParameter("age"));
+            dbbean.setTelephone(request.getParameter("telephone"));
+            dbbean.setEmail(request.getParameter("email"));
+            dbbean.setAddress(request.getParameter("address"));
+
+            boolean isSuccess = dbbean.addDonator();
+            if (isSuccess) {%>
+                <jsp:forward page="userRegistered.html"/>
+            <% } else {%>
+                <jsp:forward page="registerError.html"/>
+            <% }
+        }
     %>
 </body>
 </html>

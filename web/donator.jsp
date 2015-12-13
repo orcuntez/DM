@@ -22,7 +22,7 @@
 
         <div class="header">
             <!-- TITLE -->
-            <h1><a href="index.jsp">Donation Manager System</a></h1>
+            <h1><a href="donator.jsp">Donation Manager System</a></h1>
             <h2>Işık University</h2>
             <!-- END TITLE -->
         </div>
@@ -30,7 +30,7 @@
         <div class="nav">
             <ul>	
                 <!-- MENU -->
-                <li><a href="index.jsp">Home</a></li>
+                <li><a href="donator.jsp">Home</a></li>
                 <li><a href="logout.jsp">Logout</a></li>
                 <!-- END MENU -->
             </ul>
@@ -44,6 +44,8 @@
                 <p>Welcome to Donator Page</p>	
 
                 <br/><br/>
+                
+                <li><a href="editDonator.html">Edit Profile</a></li>
 
                 <!-- END CONTENT -->
 
@@ -53,12 +55,14 @@
 
                 <!-- SIDEBAR -->	
 
-                <h4 style="color: blue;">Welcome Donator: <%= firstname %> </h4>	
+                <a href="donator.jsp"><h4 style="color: blue;">Welcome Donator: <%= firstname %> </h4></a>
 
                 <h4>Links</h4>
                 <ul class="blocklist">
-                    <li><a href="#">My Donations</a></li>
-                    <li><a href="#">Make Donation</a></li>
+                    <li><a href="myDonations.jsp">My Donations</a></li>
+                    <li><a href="makeMoneyDonation.jsp">Make Money Donation</a></li>
+                    <li><a href="makeBloodDonation.jsp">Make Blood Donation</a></li>
+                    <li><a href="makeStuffDonation.jsp">Make Stuff Donation</a></li>
                     <li><a href="logout.jsp">Logout</a></li>
                 </ul>
 

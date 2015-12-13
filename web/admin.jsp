@@ -15,13 +15,13 @@
             response.sendRedirect("index.jsp");
         }
         String username = (String)session.getAttribute("username");
-        String firstname = dbbean.takeFirstname(username);
+        String firstname = dbbean.takeAdminname(username);
     %>
     <div class="pagewidth">
 
         <div class="header">
             <!-- TITLE -->
-            <h1><a href="index.jsp">Donation Manager System</a></h1>
+            <h1><a href="admin.jsp">Donation Manager System</a></h1>
             <h2>Işık University</h2>
             <!-- END TITLE -->
         </div>
@@ -29,7 +29,7 @@
         <div class="nav">
             <ul>	
                 <!-- MENU -->
-                <li><a href="index.jsp">Home</a></li>
+                <li><a href="admin.jsp">Home</a></li>
                 <li><a href="logout.jsp">Logout</a></li>
                 <!-- END MENU -->
             </ul>
@@ -43,7 +43,9 @@
                 <p>Welcome to Admin Page</p>	
 
                 <br/><br/>
-
+                <li><a href="acceptFoundation.jsp">Accept Foundation</a></li>
+                <!-- <li><a href="deleteFoundation.jsp">Remove Foundation</a></li> -->
+                <li><a href="deleteDonator.jsp">Remove Donator</a></li>
                 <!-- END CONTENT -->
 
             </div>
@@ -52,12 +54,15 @@
 
                 <!-- SIDEBAR -->	
 
-                <h4 style="color: darkorange;">Welcome Admin: <%= firstname %> </h4>	
+                <a href="admin.jsp"><h4 style="color: darkorange;">Welcome Admin: <%= firstname %> </h4></a>	
 
                 <h4>Links</h4>
                 <ul class="blocklist">
-                    <li><a href="#">Check Donations</a></li>
-                    <li><a href="#">Check Requests</a></li>
+                    <li><a href="stocklist.jsp">Stock Room</a></li>
+                    <li><a href="allDonations.jsp">All Donations</a></li>
+                    <li><a href="allReceiveds.jsp">All Donations Sent</a></li>
+                    <li><a href="checkDonations.jsp">Check Donations</a></li>
+                    <li><a href="checkRequests.jsp">Check Requests</a></li>
                     <li><a href="logout.jsp">Logout</a></li>
                 </ul>
 

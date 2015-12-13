@@ -14,20 +14,34 @@
         String submit = request.getParameter("Login");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-
-        int check = dbbean.checkUser(username, password);
+        String usertype = request.getParameter("usertype");
+        
+        int check = Integer.parseInt(usertype);
+        
     %>        
     <%  if( check == 1 ) {
-            session.setAttribute("username", username);
-            response.sendRedirect("admin.jsp");
+            if( dbbean.checkAdmin(username,password) ){
+                session.setAttribute("username", username);
+                response.sendRedirect("admin.jsp");
+            } else {%>
+                <jsp:forward page="loginError.html"/>
+            <%}
         } else if ( check == 2 ) {
-            session.setAttribute("username", username);
-            response.sendRedirect("donator.jsp");
+            if( dbbean.checkDonator(username,password) ){
+                session.setAttribute("username", username);
+                response.sendRedirect("donator.jsp");
+            } else {%>
+                <jsp:forward page="loginError.html"/>
+            <%}
         } else if ( check == 3 ) {
-            session.setAttribute("username", username);
-            response.sendRedirect("foundation.jsp");
+            if( dbbean.checkFoundation(username,password) ){
+                session.setAttribute("username", username);
+                response.sendRedirect("foundation.jsp");
+            } else {%>
+                <jsp:forward page="loginError.html"/>
+            <%}
         } else {%>
-    <jsp:forward page="loginerror.html"/>
-    <%}%>        
+            <jsp:forward page="loginError.html"/>
+        <%}%>        
 </body>
 </html>

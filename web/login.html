@@ -20,7 +20,8 @@
             <ul>	
                 <!-- MENU -->
                 <li><a href="index.jsp">Home</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><a href="register.html">Donator Register</a></li>
+                <li><a href="registerFoundation.html">Foundation Register</a></li>
                 <li class="selected"><a href="login.html">User Login</a></li>
                 <!-- END MENU -->
             </ul>
@@ -49,6 +50,16 @@
                             </td>
                             <td>
                                 <input type="password" size="50" align="right" name="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>User Type :</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="usertype" value="1">Admin<br>
+                                <input type="radio" name="usertype" value="2" checked>Donator<br>
+                                <input type="radio" name="usertype" value="3">Foundation
                             </td>
                         </tr>
                         <tr>
