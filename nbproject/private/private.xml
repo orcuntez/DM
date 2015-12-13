@@ -4,18 +4,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/requestSuccessful.jsp</file>
             <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/src/java/db/DBBean.java</file>
-            <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/registerFoundation.jsp</file>
-            <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/requestUpdateSuccessful.jsp</file>
-            <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/requestAction.jsp</file>
-            <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/requestUpdateError.jsp</file>
-            <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/foundation.jsp</file>
-            <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/stocklist.jsp</file>
-            <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/register.jsp</file>
-            <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/requestError.jsp</file>
+            <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/acceptFoundation.jsp</file>
+            <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/userRegistered.html</file>
             <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/admin.jsp</file>
-            <file>file:/C:/Users/Tuncay/Documents/NetBeansProjects/DonationManager/web/donator.jsp</file>
         </group>
     </open-files>
 </project-private>
